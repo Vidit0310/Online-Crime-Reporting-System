@@ -111,7 +111,7 @@ For admin login: `http://127.0.0.1:8000/admin`
 
 ## Screenshots
 
-|  ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/home_page.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/Log_in.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/register.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/user_Dashboard.png)|
+|  ![](https://github.com/Vidit0310/Online-Crime-Reporting-System/blob/main/Screenshots/home_page.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/Log_in.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/register.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/user_Dashboard.png)|
 |--------------| --------------|   --------------|  --------------|    
 |  ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/admin_Dashboard.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/admin_login.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/manage_profile.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/view_status.png)|
 
