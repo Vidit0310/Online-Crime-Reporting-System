@@ -122,6 +122,21 @@ Python Version: 	`3.11.4`
 Django Version: 	`4.1`
 
 
+##Developers
+
+<table>
+<td align="center">
+	<a href="https://github.com/Prakash0405"><img src="https://avatars.githubusercontent.com/u/102889921?v=4" width="100px;" alt="prakash suthar Image"/><br>
+	<sub><b>Prakash Suthar</b></sub></a><br/>
+	<sub><b>Web Dev</b></sub><br/>
+</td>
+<td align="center">
+	<a href="https://github.com/Vidit0310"><img src="https://avatars.githubusercontent.com/u/75829054?v=4" width="100px;" alt="Vidit S Image"/><br>
+	<sub><b>Vidit</b></sub></a><br/>
+	<sub><b>Web Dev</b></sub><br/>
+</td>
+</table>
+
 
 
 
