@@ -68,7 +68,7 @@ def register(request):
 
         # Redirect to the login page
         return redirect(reverse('landing_page'))
-    
+
     # Render the form for GET requests
     print(context)
     return render(request, 'register.html',context)
@@ -80,22 +80,20 @@ def user_login(request):
 
         # get the username and password from the POST request
         email1  = request.POST.get('email')
+        email1 = email1.lower()
         password1  = request.POST.get('password')
-        
-        print(email1)
-        print(password1)
         user = None
         try:
-            user = CustomUser.objects.get(email=email1)
+            user = CustomUser.objects.get(email__iexact=email1)
             print("user")
         except :
             try:
-                user = police_incharge.objects.get(email=email1)
+                user = police_incharge.objects.get(email__iexact=email1)
                 print("psi")
             except :
                 print("psi not exist")
                 try:
-                    user = police_officer.objects.get(email=email1)
+                    user = police_officer.objects.get(email__iexact=email1)
                     print("police")
                 except :
                     print("police not exist")
@@ -107,7 +105,7 @@ def user_login(request):
         if user is not None:
             print("fetching")
             authenticate_user = authenticate(request, email=email1, password=password1)
-            
+
             if authenticate_user is not None:
                 print("fetched")
                 print(user)
@@ -118,18 +116,18 @@ def user_login(request):
                         context.update({'Login_status':""})
                         print(context['Login_status'])
                         return redirect('/user')
-                    
+
                     elif isinstance(authenticate_user, police_incharge):
                         login(request, user,backend='accounts.auth.PoliceInchargeBackend')
                         context.update({'Login_status':""})
                         print(context['Login_status'])
-                        return  redirect('/police_incharge_home',user) 
-                    
+                        return  redirect('/police_incharge_home',user)
+
                     elif isinstance(authenticate_user, police_officer):
                         login(request, user,backend='accounts.auth.PoliceBackend')
                         context.update({'Login_status':""})
                         print(context['Login_status'])
-                        return  redirect('/police') 
+                        return  redirect('/police')
                 else:
                     context.update({'Login_status':"Invalid credentials"})
                     print(context['Login_status'])
@@ -140,7 +138,7 @@ def user_login(request):
     else:
         # render the login page
         return render(request, 'login.html')
-    
+
 
 
 def user_logout(request):
@@ -151,7 +149,7 @@ def index(request):
     return render(request, 'index.html')
 
 def get_districts(request):
-    state_name = request.GET.get('complaint_state') 
+    state_name = request.GET.get('complaint_state')
     state_object = state_master.objects.get(state_name=state_name)
     state_id = state_object.state_id
     districts_objects = district_master.objects.filter(state_id=state_id)
@@ -159,7 +157,7 @@ def get_districts(request):
     return JsonResponse({'districts': districts})
 
 def get_police_stations(request):
-    district_name = request.GET.get('complaint_district') 
+    district_name = request.GET.get('complaint_district')
     district_object = district_master.objects.get(district_name=district_name)
     district_id = district_object.district_id
     police_station_objects = police_station_master.objects.filter(district_id=district_id)
@@ -171,7 +169,7 @@ def get_police_stations(request):
 
 
 def get_districts_register(request):
-    state_name = request.GET.get('complainant_state') 
+    state_name = request.GET.get('complainant_state')
     state_object = state_master.objects.get(state_name=state_name)
     state_id = state_object.state_id
     districts_objects = district_master.objects.filter(state_id=state_id)
@@ -205,8 +203,8 @@ def police(request):
             'total_firs' :total_firs,
             'total_csrs' :total_csrs,
             'total_reports' :total_reports,
-            'cases_under_investigation' :cases_under_investigation, 
-            'total_firs_solved': total_firs_solved,  
+            'cases_under_investigation' :cases_under_investigation,
+            'total_firs_solved': total_firs_solved,
             'total_csrs_solved': total_csrs_solved
     }
     return render(request, 'police.html',context)
@@ -254,9 +252,9 @@ def police_incharge_view_complaint(request):
 
 def register_fir_csr(request):
     if request.method == 'POST':
-        complaint_type = request.POST.get('complaint_type')        
+        complaint_type = request.POST.get('complaint_type')
         complaint_id = request.POST.get('complaint_id')
-        print(f"complaint_id: {complaint_type}")   
+        print(f"complaint_id: {complaint_type}")
         complainant_name = request.POST.get('name')
         complainant_gender = request.POST.get('gender')
         complainant_contact_no = request.POST.get('contact_no')
@@ -397,7 +395,7 @@ def register_fir_csr(request):
             complaint.status = "CSR is Filed"
             complaint.save()
             return redirect('police_incharge_view_complaint')
-        
+
         else:
             complaint = complaint_master.objects.get(complaint_id=complaint_id)
             complaint.status = 'Rejected'
@@ -684,12 +682,12 @@ def police_manage_fir(request,fir_id):
 
     else:
         return render(request,'police_manage_fir.html',context)
-    
+
 
 
 def user_manage_profile(request):
     states = state_master.objects.all()
-    districts = district_master.objects.filter(state_name=request.user.state) 
+    districts = district_master.objects.filter(state_name=request.user.state)
     context = {
         'states': states,
         'districts': districts,
@@ -733,7 +731,7 @@ def user_manage_profile(request):
 
 def police_incharge_manage_profile(request):
     states = state_master.objects.all()
-    districts = district_master.objects.filter(state_name=request.user.state) 
+    districts = district_master.objects.filter(state_name=request.user.state)
 
     context = {
         'states': states,
@@ -776,7 +774,7 @@ def police_incharge_manage_profile(request):
 
 def police_manage_profile(request):
     states = state_master.objects.all()
-    districts = district_master.objects.filter(state_name=request.user.state) 
+    districts = district_master.objects.filter(state_name=request.user.state)
 
     context = {
         'states': states,

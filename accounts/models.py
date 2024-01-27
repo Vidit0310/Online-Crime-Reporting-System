@@ -6,6 +6,8 @@ from django.contrib.auth.models import Group
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.decorators import permission_required
 from django.contrib.auth.models import Permission
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 
 
 
@@ -28,10 +30,10 @@ class CustomUserManager(BaseUserManager):
             raise TypeError('Superusers must have a password.')
 
         return self.create_user(email, password, **extra_fields)
-    
+
     # def has_module_perms(self, user_obj, app_label):
     #     # Return True if the user has any permissions in the given app_label.
-    #     return  user_obj.is_superuser 
+    #     return  user_obj.is_superuser
 
 class CustomUser(AbstractBaseUser,  PermissionsMixin):
     # ...
@@ -146,7 +148,7 @@ class police_incharge(AbstractBaseUser,  PermissionsMixin):
 
     address = models.CharField(max_length=500,null=False,blank=False)
     pincode = models.IntegerField(null=False,blank=False)
-    
+
     status_id = models.CharField(max_length=10,null=False, blank=False,choices=status_id_choices)
     created_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(null=True, blank=True)
@@ -160,12 +162,12 @@ class police_incharge(AbstractBaseUser,  PermissionsMixin):
 
     def __str__(self):
         return self.email
-    
+
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     is_user = models.BooleanField(default=True)
-    
+
 class police_officer(AbstractBaseUser,  PermissionsMixin):
     # ...
     groups = models.ManyToManyField(
@@ -226,9 +228,24 @@ class police_officer(AbstractBaseUser,  PermissionsMixin):
 
     def __str__(self):
         return self.email
-    
+
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     is_user = models.BooleanField(default=True)
-    
+
+
+
+@receiver(pre_save, sender=CustomUser)
+def normalize_custom_user_email(sender, instance, **kwargs):
+    instance.email = instance.email.lower()
+
+@receiver(pre_save, sender=police_incharge)
+def normalize_police_incharge_email(sender, instance, **kwargs):
+    instance.email = instance.email.lower()
+
+@receiver(pre_save, sender=police_officer)
+def normalize_police_officer_email(sender, instance, **kwargs):
+    instance.email = instance.email.lower()
+
+
