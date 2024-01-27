@@ -122,7 +122,7 @@ Python Version: 	`3.11.4`
 Django Version: 	`4.1`
 
 
-## Developers
+### Developers
 
 <table>
 <td align="center">
