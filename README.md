@@ -1,8 +1,8 @@
 
 # Online Crime Reporting System Using Django
-![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/home_page.gif)
+![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/home_page.gif)
 
-[OCRS](https://github.com/Prakash0405/OnlineCrimeReportingSystem)  Online Crime Reporting System, developed using Python Django, HTML, CSS, and JavaScript, aims to enhance crime reporting efficiency and communication between citizens and law enforcement agencies. The user interface enables citizens to securely register, manage profiles, and create detailed crime reports with specific categories and file uploads. Admins, through a centralized dashboard, oversee and verify complaints, assigning them to police stations. Police officers access secure login functionality, manage profiles, and update FIR and CSR statuses in real-time. The system, developed with Django Forms and Models, anticipates delivering a secure, user-friendly platform, contributing significantly to community safety.
+[OCRS](https://github.com/Prakash0405/Online-Crime-Reporting-System)  Online Crime Reporting System, developed using Python Django, HTML, CSS, and JavaScript, aims to enhance crime reporting efficiency and communication between citizens and law enforcement agencies. The user interface enables citizens to securely register, manage profiles, and create detailed crime reports with specific categories and file uploads. Admins, through a centralized dashboard, oversee and verify complaints, assigning them to police stations. Police officers access secure login functionality, manage profiles, and update FIR and CSR statuses in real-time. The system, developed with Django Forms and Models, anticipates delivering a secure, user-friendly platform, contributing significantly to community safety.
 
 
 ## Features
@@ -68,7 +68,7 @@
 | -------| -------| -------| -------|
 | Email: `admin@admin.com` | Email: `thaltejpi@gov.in` |   Email: `thaltejpolice@gov.in` |   Email: `user@gamil.com` |
 | Password: `123` |  Password: `123` |  Password: `123` |  Password: `123` |
-| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/admin_Dashboard.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/pi_Dashboard.png) |    ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/PO_Dashboard.png)  |    ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/user_Dashboard.png)  |
+| ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/admin_Dashboard.png)| ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/pi_Dashboard.png) |    ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/PO_Dashboard.png)  |    ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/user_Dashboard.png)  |
 
  
   
@@ -111,9 +111,9 @@ For admin login: `http://127.0.0.1:8000/admin`
 
 ## Screenshots
 
-|  ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/home_page.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/Log_in.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/register.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/user_Dashboard.png)|
+|  ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/home_page.png)| ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/Log_in.png)| ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/register.png)| ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/user_Dashboard.png)|
 |--------------| --------------|   --------------|  --------------|    
-|  ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/admin_Dashboard.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/admin_login.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/manage_profile.png)| ![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/view_status.png)|
+|  ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/admin_Dashboard.png)| ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/admin_login.png)| ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/manage_profile.png)| ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/view_status.png)|
 
 # The Project was developed using the following:
 
