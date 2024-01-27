@@ -1,6 +1,6 @@
 
 # Online Crime Reporting System Using Django
-![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/home_page.png)
+![](https://github.com/Prakash0405/OnlineCrimeReportingSystem/blob/main/Screenshots/home_page.gif)
 
 [OCRS](https://github.com/Prakash0405/OnlineCrimeReportingSystem)  Online Crime Reporting System, developed using Python Django, HTML, CSS, and JavaScript, aims to enhance crime reporting efficiency and communication between citizens and law enforcement agencies. The user interface enables citizens to securely register, manage profiles, and create detailed crime reports with specific categories and file uploads. Admins, through a centralized dashboard, oversee and verify complaints, assigning them to police stations. Police officers access secure login functionality, manage profiles, and update FIR and CSR statuses in real-time. The system, developed with Django Forms and Models, anticipates delivering a secure, user-friendly platform, contributing significantly to community safety.
 
