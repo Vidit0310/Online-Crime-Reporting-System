@@ -29,9 +29,8 @@ SECRET_KEY = 'django-insecure-uspl8su*i+@p(-8p@$u8*57l4!om2ut$-=wqc^c7(h4q!vhzh1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-# ALLOWED_HOSTS = []
 # python manage.py runserver 192.168.0.100:8000
-ALLOWED_HOSTS = ['Vidit03.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -137,13 +136,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-=======
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
->>>>>>> 47ec2627fb6a7fbb8b033c62a801e1e9cc2017b6
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
