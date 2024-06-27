@@ -1,3 +1,8 @@
+## Hosted Project
+
+You can view the hosted version of this project [here](http://vidit03.pythonanywhere.com).
+
+Alternatively, you can visit this URL directly: https://vidit03.pythonanywhere.com/
 
 # Online Crime Reporting System Using Django
 ![](https://github.com/Prakash0405/Online-Crime-Reporting-System/blob/main/Screenshots/home_page.gif)
