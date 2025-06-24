@@ -36,6 +36,10 @@ DEBUG = False
 # python manage.py runserver 192.168.0.100:8000
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://online-crime-reporting-system.onrender.com',
+]
+
 
 
 AUTH_USER_MODEL = "accounts.CustomUser"
