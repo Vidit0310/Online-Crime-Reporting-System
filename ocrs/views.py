@@ -30,6 +30,8 @@ def register(request):
         # Get data from the form
         username = request.POST.get('username')
         email = request.POST.get('email')
+        email = email.lower()
+
         Phone_Number = request.POST.get('Phone_Number')
         first_name = request.POST.get('fname')
         last_name = request.POST.get('lname')
